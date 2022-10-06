@@ -33,23 +33,29 @@ public class Point {
         y = newY;
     }
 
-    public void coordinate(){
-        System.out.println("(" + x + ", " + y);
+    public String coordinate(){
+        return("(" + x + ", " + y + ")");
     }
 
     public String quadrant(){
+        if (x == 0&& y ==0){
+            return ("origin");
+        }
+        if (x == 0 || y ==0){
+            return ("on an axis");
+        }
         if (x > 0 && y > 0){
-
+            return ("I");
         }
         if (x < 0 && y > 0){
-
+            return ("II");
         }
         if (x > 0 && y < 0){
-
+            return ("IV");
         }
-        if (x < 0 && y > 0){
-
+        if (x < 0 && y < 0){
+            return ("III");
         }
-    }
+    return ("error");}
 
 }
